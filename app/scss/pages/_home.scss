@@ -1,0 +1,486 @@
+.banner {
+    height: 650px;
+    background-image: url("./assets/images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    @media (max-width: 767px) {
+        background-size: cover;
+    }
+}
+
+.sub-banner {
+    padding: 35px;
+    background: $yellow;
+    text-align: center;
+    h2 {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.new-merchandise {
+    text-align: center;
+    position: relative;
+
+    &__header {
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid $yellow;
+        line-height: 0.1em;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        span {
+            background: #fff;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__products-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr;
+        column-gap: 7em;
+        row-gap: 7em;
+        margin-top: 5em;
+
+        @media (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 479px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.categories {
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        column-gap: 1.5em;
+        row-gap: 1.5em;
+
+        @media (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 479px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        height: 375px;
+        max-height: 375px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--outerwear {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/categories/outerwear.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover {
+                @include animationHover("./assets/categories/outerwear.jpg");
+            }
+        }
+
+        &--skis {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/categories/skis.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover {
+                @include animationHover("./assets/categories/skis.jpg");
+            }
+        }
+
+        &--knitwear {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/categories/knitwear.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover {
+                @include animationHover("./assets/categories/knitwear.jpg");
+            }
+        }
+
+        &--accessories {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/categories/accessories.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover {
+                @include animationHover("./assets/categories/accessories.jpg");
+            }
+        }
+
+        &--googles {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/categories/googles.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover {
+                @include animationHover("./assets/categories/googles.jpg");
+            }
+        }
+
+        &--jackets {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/categories/jackets.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover {
+                @include animationHover("./assets/categories/jackets.jpg");
+            }
+        }
+
+        @media (max-width: 767px) {
+            height: 250px;
+            max-height: 250px;
+        }
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__heading {
+        color: #ffffff;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+        font-weight: 400;
+        font-size: 4em;
+
+        @media (max-width: 767px) {
+            font-size: 2.2em;
+        }
+    }
+
+    &__subheading {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        margin-bottom: 0;
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            color: #ffffff;
+            @include transition-2;
+            &:hover {
+                i {
+                    transform: translateX(-5px);
+                }
+            }
+        }
+
+        i {
+            color: #ffffff;
+            font-size: 15px;
+            display: inline-block;
+            margin-left: 5px;
+            position: relative;
+            @include transition-2;
+        }
+    }
+}
+
+.best-sellers {
+    &__header {
+        width: 100%;
+        text-align: center;
+        border-bottom: 3px solid $yellow;
+        line-height: 0.1em;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        span {
+            background: #fff;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__products-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr;
+        column-gap: 7em;
+        row-gap: 7em;
+        margin-top: 5em;
+
+        @media (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 479px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.instagram {
+    margin-top: 90px;
+    position: relative;
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 1fr;
+        column-gap: 1.5em;
+        row-gap: 1.5em;
+
+        @media (max-width: 1199px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 550px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 479px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__hashtag {
+        width: 220px;
+        max-width: 220px;
+        padding: 10px 20px;
+        background: $yellow;
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        margin-left: -130px;
+        top: 50%;
+        margin-top: -35px;
+        z-index: 9999;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        font-size: 4em;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    &__overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(224, 255, 4, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        @include instagramAnimation();
+
+        a {
+            color: white;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 3px;
+            text-transform: uppercase;
+            display: inline-block;
+            font-size: 1.8em;
+            cursor: pointer;
+        }
+    }
+
+    &__item {
+        height: 290px;
+        max-height: 290px;
+        width: 100%;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        position: relative;
+
+        &:hover {
+            .instagram__overlay {
+                display: flex !important;
+            }
+        }
+
+        &--one {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_1.jpg");
+        }
+
+        &--two {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_2.jpg");
+        }
+
+        &--three {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_3.jpg");
+        }
+
+        &--four {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_4.jpg");
+        }
+
+        &--five {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_5.jpg");
+        }
+
+        &--six {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_6.jpg");
+        }
+
+        &--seven {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_7.jpg");
+        }
+
+        &--eight {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_8.jpg");
+        }
+
+        &--nine {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_9.jpg");
+        }
+
+        &--ten {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_10.jpg");
+        }
+
+        &--eleven {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_11.jpg");
+        }
+
+        &--twelve {
+            background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2) 100%),
+                url("./assets/images/instagram_12.jpg");
+        }
+    }
+}
+
+.footer {
+    background: $yellow;
+    padding: 30px 0 60px;
+    margin-top: 5em;
+
+    &__footer-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        column-gap: 7em;
+        row-gap: 7em;
+        margin-top: 5em;
+        div {
+            flex: auto;
+        }
+
+        @media(max-width: 991px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__footer-item {
+
+        p {
+            text-transform: uppercase;
+        }
+
+        input[type="email"] {
+            height: 30px;
+            width: 95%;
+            border: none;
+            margin-bottom: 0.7em;
+            display: block;
+            padding-left: 20px;
+            &:hover, &:focus {
+                outline: none !important;
+                border: none !important;
+            }
+        }
+
+        input[type="checkbox"] {
+            border: none;
+            outline: none;
+            display: inline;
+        }
+
+        label {
+            display: inline;
+            position: relative;
+            top: -2px;
+            font-size: 1.2em;
+            left: 3px;
+        }
+
+        button {
+            display: block;
+            background: none;
+            border: none;
+            margin-top: 0.7em;
+            cursor: pointer;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            &:active, &:focus, &:hover {
+                outline: none;
+                border: none;
+            }
+        }
+
+        &:last-of-type {
+            justify-self: end;
+            @media(max-width: 991px){
+                justify-self: center;
+            }
+        }
+
+        @media(max-width: 991px){
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        max-width: 200px;
+        height: 50px;
+        margin-bottom: 4em;
+    }
+
+    &__links {
+        li {
+            display: inline-block;
+            @media(max-width: 991px){
+                padding: 10px;
+            }
+            a {
+                padding-right: 15px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $black;
+                @include transition-1;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
